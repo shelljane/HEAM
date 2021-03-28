@@ -9,7 +9,7 @@
 
 ## Optimization Procedure of the 8×8 Unsigned Approximate Multiplier
 
-![](https://github.com/shelljane/HEAM/main/fig.png)
+![](https://github.com/shelljane/HEAM/blob/main/fig.png)
 
 
 ## Experiments of the Approximate Multiplier and the Exact WallaceTree multiplier on Design Compiler(DC) with Semiconductor Manufacturing International Corporation (SMIC) 65nm technology
