@@ -9,7 +9,41 @@
 
 ## Optimization Procedure of the 8×8 Unsigned Approximate Multiplier
 
-![](https://github.com/shelljane/HEAM/blob/main/fig.png)
+![](./fig.png)
+
+## How to compile them?
+
+**Make sure that you have installed Design Compiler(DC).**
+
+### compile approximate_multiplier.v
+
+- step 1: set `TOP_LEVEL`, `all_src`, and `TOP` in `scripts/top.tcl` at line 1, line 11, and line 15 respectively:
+```   
+set TOP_LEVEL approximate_multiplier
+set all_src "approximate_multiplier.v"
+set TOP approximate_multiplier
+```
+
+ - step 2: run commands in terminal:
+```
+dc_shell
+source scripts/top.tcl
+```
+
+### compile wallacetree.v
+
+- step 1: set `TOP_LEVEL`, `all_src`, and `TOP` in `scripts/top.tcl` at line 1, line 11, and line 15 respectively:
+```   
+set TOP_LEVEL wallacetree
+set all_src "wallacetree.v"
+set TOP wallacetree
+```
+
+ - step 2: run commands in terminal:
+```
+dc_shell
+source scripts/top.tcl
+```
 
 
 ## Experiments of the Approximate Multiplier and the Exact WallaceTree multiplier on Design Compiler(DC) with Semiconductor Manufacturing International Corporation (SMIC) 65nm technology
