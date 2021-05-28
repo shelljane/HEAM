@@ -22,17 +22,25 @@ uniquify
 link
 
 #### CONSTRAINTS ####
-set_wire_load_model -name 4000 -library SP65NLLD2_3P3V_v0p1_tt_v1p20_25C
-set_operating_conditions ff_v1p32_-40c
-set_wire_load_mode segmented
-set MAX_LOAD [load_of scc65nll_hs_lvt_ff_v1p32_-40c_ccs/LVT_DRNHSV1/D]
+#7nm
+set MAX_LOAD [load_of asap7sc7p5t_INVBUF_RVT_TT_ccs_201020/INVx3_ASAP7_75t_R/A]
 set_load [expr $MAX_LOAD*5] [all_outputs]
 
+#55nm
+#set MAX_LOAD [load_of scc55nll_vhs_rvt_tt_v1p2_25c_ccs/INVHSV0/I]
+#set_load [expr $MAX_LOAD*5] [all_outputs]
 
-ungroup -flatten -all
-compile -map_effort medium -ungroup_all
+#65nm
+#set_wire_load_model -name 4000 -library SP65NLLD2_3P3V_v0p1_tt_v1p20_25C
+#set MAX_LOAD [load_of scc65nll_hs_lvt_ff_v1p32_-40c_ccs/LVT_DRNHSV1/D]
+#set_load [expr $MAX_LOAD*5] [all_outputs]
 
-compile_ultra -inc
+create_clock -period 333.33 -name VCLK
+set_input_delay 0 -clock VCLK [all_inputs]
+set_output_delay 0 -clock VCLK [all_outputs]
+
+
+compile_ultra
 
 
 #### REPORTS ####
