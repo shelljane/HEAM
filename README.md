@@ -13,7 +13,7 @@
 
 ## How to compile them?
 
-**Make sure that you have installed Design Compiler(DC).**
+**Make sure that you have installed Design Compiler(DC) and prepared your library files.**
 
 ### compile approximate_multiplier.v
 
@@ -46,15 +46,19 @@ source scripts/top.tcl
 ```
 
 
-## Experiments of the Approximate Multiplier and the Exact WallaceTree multiplier on Design Compiler(DC) with Semiconductor Manufacturing International Corporation (SMIC) 65nm technology
+## Experiments of the Approximate Multiplier and the Exact WallaceTree multiplier on Design Compiler(DC) in 3Ghz with a 7-nm Predictive Process Design Kit (PDK) Called the ASAP7 PDK[1]
+
 
 |         |   Ours  | WallaceTree | Reduction |
 | :-----: | :-----: | :-----: |  :-----: | 
-| Area ( μm * μm ) | 523.32 | 829.11 | 36.88% |
-| Power ( μW )  | 313.13 | 658.49 | 52.45% |
-| Latency ( ns ) | 1.01 | 1.34 | 24.63% |
+| Area ( μm * μm ) | 17.52516 | 42.98184 | 59.23% |
+| Power ( μW )  | 76.2003 | 151.9432 | 49.85% |
+
 
 
 ## Future
-1. add our four reproduced approximate multipliers for comparison;
-2. add DNNs accelerators.
+1. add several reproduced approximate multipliers for comparison;
+2. add DNNs accelerators results.
+
+## Reference
+[1] Clark, Lawrence T., et al. "ASAP7: A 7-nm finFET predictive process design kit." Microelectronics Journal 53 (2016): 105-115.
